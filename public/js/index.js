@@ -1,6 +1,9 @@
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
+var $exampleEmail = $("#example-email");
+var $exampleAmount = $("#example-amount");
+var $exampleNumber = $("#example-number");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
@@ -66,10 +69,13 @@ var handleFormSubmit = function(event) {
 
   var example = {
     text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+    description: $exampleDescription.val().trim(),
+    email: $exampleEmail.val().trim(),
+    amount: $exampleAmount.val().trim(),
+    number: $exampleNumber.val().trim(),
   };
 
-  if (!(example.text && example.description)) {
+  if (!(example.text && example.description && example.email && example.amount && example.number)) {
     alert("You must enter an example text and description!");
     return;
   }
@@ -80,6 +86,9 @@ var handleFormSubmit = function(event) {
 
   $exampleText.val("");
   $exampleDescription.val("");
+  $exampleEmail.val("");
+  $exampleAmount.val("");
+  $exampleNumber.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -97,3 +106,5 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+
