@@ -1,28 +1,47 @@
 <div id="home">
+
+  <div class="bg-img">
+  <div class="headerBar">
+    <div class="topnav">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
+</div>
+
+<div>
+          <h1>{{msg}}</h1>
+        <h2>GOOD SAMARITAN! </h2>
+</div>
+</div>
+
+
+<div>
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>GOOD SAMARITAN! </h2>
+
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Donor Name</label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Donor Name here">
           </div>
           <div class="form-group">
-            <label for="example-description">Donor Phone Number</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Donor Phone Numbere here"></textarea>
+            <label for="example-description">Description</label>
+            <input type="text" id="example-description" class="form-control"aria-describedby="example-description" placeholder="Enter Donor Phone Numbere here">
           </div>
           <div class="form-group">
-            <label for="example-email">Example email</label>
+            <label for="example-email">Donor email</label>
             <input type="text" id="example-email" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
           <div class="form-group">
-            <label for="example-amount">Example amount</label>
+            <label for="example-amount">Donation amount</label>
             <input type="text" id="example-amount" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
           <div class="form-group">
-            <label for="example-number">Example number</label>
+            <label for="example-number">Donor number</label>
             <input type="text" id="example-number" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
