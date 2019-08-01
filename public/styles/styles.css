@@ -45,4 +45,13 @@
   color: black;
 }
 
+h1,h2{
+  text-align:center;
+  color:white;
+
+}
+.form-group{
+  font-weight: bold;
+}
+
 
