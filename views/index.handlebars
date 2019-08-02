@@ -33,7 +33,10 @@
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="example/{{this.id}}">{{this.name}}</a>
              <button class="btn btn-danger float-right delete">DELETE</button>
-            <button class="btn btn-default float-right edit" data-id={{this.id}}>EDIT</button>
+           <a href="example/edit/{{this.id}}">
+             
+           <button class="btn btn-default float-right edit" data-id={{this.id}}>EDIT</button>
+           </a> 
           
           </li>
           {{/each}}
@@ -47,13 +50,6 @@
 <script src="/js/index.js"></script>
 
 <script>
-$(".edit").on("click", function(){
-var id = $(this).attr('data-id')
-console.log(id)
-$.ajax({
-url: "example/edit/" + id,
-type: "GET"
-});
-});
+
 
 </script>

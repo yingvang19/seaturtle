@@ -4,7 +4,7 @@
       <div class="card mt-4">
         <div class="card-body">
           <h5 class="card-title">Example</h5>
-          <p><label>ID</label>: <input data-field="id" value="{{example.id}}" type="text"/></p>
+          <p><label>ID</label>: <input data-field="id" value="{{example.id}}" type="text" readonly/></p>
           <p>
           <p><label>Name:</label>: <input data-field="name" value="{{example.name}}" type="text"/></p>
           <p><label>Description:</label> <input data-field="description" value="{{example.description}}" type="text"/></p>
@@ -43,6 +43,7 @@ function sendData(data){
   }).done(function() {
     console.log("SUCCESS");
   });
+  window.location.replace("/");
 }
 $("#save-data").click(updateData);
 
