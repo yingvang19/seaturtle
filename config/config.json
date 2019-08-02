@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "example_db",
+    "database": "donationdb",
     "host": "localhost",
     "dialect": "mysql"
   },
