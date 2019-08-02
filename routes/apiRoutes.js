@@ -21,4 +21,37 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+
+  //update
+   // PUT route for updating posts
+   /*
+   name: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    email: DataTypes.STRING,
+    amount: DataTypes.STRING,
+    number:
+   */
+   app.put("/api/examples/:id", function(req, res) {
+     console.log("PUT ENDPOINT HIT", req.body);
+    db.Example.update({
+        name: req.body.name,
+          description: req.body.description,
+          email: req.body.email,
+          amount: req.body.amount,
+          number: req.body.number
+
+      },{
+
+
+        where: {
+          id: req.body.id
+          
+
+        }
+      })
+      .then(function(dbExample) {
+        res.json(dbExample);
+      });
+  });
 };

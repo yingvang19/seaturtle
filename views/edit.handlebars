@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Example</h5>
+          <p><label>ID</label>: <input data-field="id" value="{{example.id}}" type="text"/></p>
+          <p>
+          <p><label>Name:</label>: <input data-field="name" value="{{example.name}}" type="text"/></p>
+          <p><label>Description:</label> <input data-field="description" value="{{example.description}}" type="text"/></p>
+          <p><label>Email:</label> <input data-field="email" value="{{example.email}}" type="text"/></p>
+          <p><label>Donation:$</label> <input data-field="amount" value="{{example.amount}}" type="text"/></p>
+          <p><label>Phone Number:</label> <input data-field="number" value="{{example.number}}" type="text"/></p>
+
+            <a href="/">← Back To Home</a>
+            <button id="save-data">save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+// need to put the data into json
+
+var updateData = function(){
+
+var output = {};
+$("input").each(function(){
+var field = $(this).data("field");
+var val = $(this).val();
+output[field] = val; 
+
+})
+console.log(output);
+sendData(output);
+}
+function sendData(data){
+  $.ajax({
+    url: "/api/examples/"+data.id,
+    data:data,
+    method:"PUT",
+  }).done(function() {
+    console.log("SUCCESS");
+  });
+}
+$("#save-data").click(updateData);
+
+
+
+</script>

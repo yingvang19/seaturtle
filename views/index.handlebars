@@ -4,26 +4,26 @@
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <h2>GOOD SAMARITAN! </h2>
-        <form class="clearfix mb-4" action="POST">
+        <form class="donors" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="example-text">Example Name</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Name">
           </div>
           <div class="form-group">
             <label for="example-description">Example Description</label>
             <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
           </div>
           <div class="form-group">
-            <label for="example-email">Example email</label>
-            <input type="text" id="example-email" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="example-email">Example Email</label>
+            <input type="text" id="example-email" class="form-control" aria-describedby="example-text" placeholder="Enter Example Email">
           </div>
           <div class="form-group">
             <label for="example-amount">Example amount</label>
             <input type="text" id="example-amount" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
           <div class="form-group">
-            <label for="example-number">Example number</label>
-            <input type="text" id="example-number" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="example-number">Example Phone number</label>
+            <input type="text" id="example-number" class="form-control" aria-describedby="example-text" placeholder="Enter 123-123-1234">
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
@@ -31,8 +31,10 @@
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
+            <a href="example/{{this.id}}">{{this.name}}</a>
+             <button class="btn btn-danger float-right delete">DELETE</button>
+            <button class="btn btn-default float-right edit" data-id={{this.id}}>EDIT</button>
+          
           </li>
           {{/each}}
         </ul>
@@ -44,4 +46,14 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 
+<script>
+$(".edit").on("click", function(){
+var id = $(this).attr('data-id')
+console.log(id)
+$.ajax({
+url: "example/edit/" + id,
+type: "GET"
+});
+});
 
+</script>
