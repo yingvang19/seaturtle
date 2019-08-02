@@ -1,33 +1,50 @@
 <div id="home">
+<div class="bg-img">
+  <div class="headerBar">
+    <div class="topnav">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+    <div >
+       <h1>{{msg}}</h1>
+        <h2>GOOD SAMARITAN! </h2>
+        </div>
+  </div>
+</div>
+ 
+
+
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>GOOD SAMARITAN! </h2>
+        {{!-- <h1>{{msg}}</h1>
+        <h2>GOOD SAMARITAN! </h2> --}}
         <form class="donors" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Name</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Name">
+            <label for="example-text">Donor Name</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Donor Name Here">
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+            <label for="example-description">Description</label>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Donation Description Here"></textarea>
           </div>
           <div class="form-group">
-            <label for="example-email">Example Email</label>
-            <input type="text" id="example-email" class="form-control" aria-describedby="example-text" placeholder="Enter Example Email">
+            <label for="example-email">Donor Email</label>
+            <input type="text" id="example-email" class="form-control" aria-describedby="example-text" placeholder="Enter Donor Email Here">
           </div>
           <div class="form-group">
-            <label for="example-amount">Example amount</label>
-            <input type="text" id="example-amount" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="example-amount">Donation Amount</label>
+            <input type="text" id="example-amount" class="form-control" aria-describedby="example-text" placeholder="Enter Donation Amount Here">
           </div>
           <div class="form-group">
-            <label for="example-number">Example Phone number</label>
-            <input type="text" id="example-number" class="form-control" aria-describedby="example-text" placeholder="Enter 123-123-1234">
+            <label for="example-number">Donor Phone Number</label>
+            <input type="text" id="example-number" class="form-control" aria-describedby="example-text" placeholder="Enter Donor Phone Number Here">
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h3>Examples:</h3>
+        <h3>Donors:</h3>
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
@@ -53,3 +70,75 @@
 
 
 </script>
+
+{{!-- 
+<div id="home">
+
+  <div class="bg-img">
+  <div class="headerBar">
+    <div class="topnav">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+    <div >
+       <h1>{{msg}}</h1>
+        <h2>GOOD SAMARITAN! </h2>
+        </div>
+  </div>
+</div>
+
+<div>
+          {{!-- <h1>{{msg}}</h1> --}}
+        {{!-- <h2>GOOD SAMARITAN! </h2>
+</div>
+</div>
+
+
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text">Donor Name</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Donor Name here">
+          </div>
+          <div class="form-group">
+            <label for="example-description">Description</label>
+            <input type="text" id="example-description" class="form-control"aria-describedby="example-description" placeholder="Enter donation description here">
+          </div>
+          <div class="form-group">
+            <label for="example-email">Donor email</label>
+            <input type="text" id="example-email" class="form-control" aria-describedby="example-text" placeholder="Enter donor Email Text">
+          </div>
+          <div class="form-group">
+            <label for="example-amount">Donation amount</label>
+            <input type="text" id="example-amount" class="form-control" aria-describedby="example-text" placeholder="Enter Donation Amount here">
+          </div>
+          <div class="form-group">
+            <label for="example-number">Donor phone number</label>
+            <input type="text" id="example-number" class="form-control" aria-describedby="example-text" placeholder="Enter donor phone number here">
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
+        <h3>Donor info :</h3>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+ --}}
