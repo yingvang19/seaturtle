@@ -7,4 +7,4 @@ cache:
   directories:
     - node_modules
 before_install:
-  - mysql -e 'CREATE DATABASE donationdb;'
+  - mysql -e 'CREATE DATABASE donation_db;'
