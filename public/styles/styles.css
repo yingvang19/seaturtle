@@ -5,6 +5,9 @@ button.delete, button.edit {
   float: right;
   margin: 5px;
 }
+/* .save-data{
+
+} */
 .list-group-item {
   line-height: 2.5;
 }
@@ -54,11 +57,52 @@ button.delete, button.edit {
 h1,h2{
   text-align:center;
   color:white;
-
+  font-size: 200px;
 }
 .form-group{
   font-weight: bold;
 }
 
 
+.animated {
+  animation-duration: 5s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+}
 
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}
