@@ -5,6 +5,13 @@ The Good Samaritan app is an Admin app that holds the donor’s information in a
 * Second is to run **npm install** to install project dependencies.
 * You should now be able to run **npm start** and start the project locally.
 
+## Group Members
+
+* Ying Vang
+* Peter Vue
+* Smriti Srivastava 
+* Mohamed Daher 
+
 ## Website Deployment
 
 https://seaturtle.herokuapp.com/
